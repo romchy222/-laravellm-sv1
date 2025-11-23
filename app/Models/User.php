@@ -114,6 +114,14 @@ class User extends Authenticatable
     }
 
     /**
+     * Get the user's answers.
+     */
+    public function answers()
+    {
+        return $this->hasMany(UserAnswer::class);
+    }
+
+    /**
      * Check if user is a student.
      */
     public function isStudent(): bool
